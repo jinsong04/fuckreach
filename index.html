@@ -52,8 +52,10 @@ function closeFullscreen() {
   }
 }
 
-openFullscreen();
-
+window.addEventListener('load', (event) => {
+  openFullscreen();
+  console.log('page is fully loaded');
+});
 </script>
 </body>
 </html>
