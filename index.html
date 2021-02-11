@@ -3,7 +3,7 @@
 </head>
 <body>
 <div>
-<img src="/reach.png" style="height:100%">
+<img src="/reach.png" style="width:100%">
 <h1 id="todaysdate" onclick="closeFullscreen()" style="
     position: absolute;
     top: 67%;
@@ -32,32 +32,6 @@ const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "O
 
 document.getElementById("todaysdate").innerHTML = month + " " + date + nth(date)
 
-var elem = document.documentElement;
-
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) { /* Safari */
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE11 */
-    document.msExitFullscreen();
-  }
-}
-
-window.addEventListener('load', (event) => {
-  openFullscreen();
-  console.log('page is fully loaded');
-});
 </script>
 </body>
 </html>
