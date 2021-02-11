@@ -1,1 +1,57 @@
-<img src="/reach.png" style="height:100%"/>
+<html>
+<head>
+</head>
+<body>
+<div>
+<img src="/reach.png" style="height:100%">
+<h1 id="todaysdate" onclick="closeFullscreen()" style="
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 500;
+">Feb 10th</h1>
+    </div>
+<script>
+  const nth = function(d) {
+  if (d > 3 && d < 21) return 'th';
+  switch (d % 10) {
+    case 1:  return "st";
+    case 2:  return "nd";
+    case 3:  return "rd";
+    default: return "th";
+  }
+}
+
+const today = new Date();
+const date = today.getDate();
+const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][today.getMonth()];
+
+document.getElementById("todaysdate").innerHTML = month + " " + date + nth(date)
+
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+
+</script>
+</body>
+</html>
