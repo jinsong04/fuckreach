@@ -32,6 +32,8 @@ const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "O
 
 document.getElementById("todaysdate").innerHTML = month + " " + date + nth(date)
 
+var elem = document.documentElement;
+
 function openFullscreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
